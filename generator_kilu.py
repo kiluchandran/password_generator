@@ -16,7 +16,11 @@ def generate_random_string(length):
 
 
 def main():
-    password = generate_random_string(10)
+    if args.length:
+        no_of_characters = args.length
+    else:
+        no_of_characters = 10
+    password = generate_random_string(no_of_characters)
     print(password)
 
 
